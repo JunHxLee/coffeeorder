@@ -1,0 +1,10 @@
+/home/soulfactor/coffeeorder/stock/src/main/java/coffeeorder/Bean.java
+/home/soulfactor/coffeeorder/stock/src/main/java/coffeeorder/BeanModified.java
+/home/soulfactor/coffeeorder/stock/src/main/java/coffeeorder/CoffeeThrew.java
+/home/soulfactor/coffeeorder/stock/src/main/java/coffeeorder/BeanController.java
+/home/soulfactor/coffeeorder/stock/src/main/java/coffeeorder/AbstractEvent.java
+/home/soulfactor/coffeeorder/stock/src/main/java/coffeeorder/PolicyHandler.java
+/home/soulfactor/coffeeorder/stock/src/main/java/coffeeorder/config/kafka/KafkaProcessor.java
+/home/soulfactor/coffeeorder/stock/src/main/java/coffeeorder/BeanRegistered.java
+/home/soulfactor/coffeeorder/stock/src/main/java/coffeeorder/BeanRepository.java
+/home/soulfactor/coffeeorder/stock/src/main/java/coffeeorder/StockApplication.java
