@@ -28,6 +28,10 @@ spring:
           uri: http://localhost:8085
           predicates:
             - Path=/beans/** 
+        - id: h2db
+          uri: http://localhost:8081
+          predicates:
+            - Path=/test_db/** 
       globalcors:
         corsConfigurations:
           '[/**]':
@@ -51,6 +55,10 @@ spring:
           uri: http://order:8080
           predicates:
             - Path=/orders/** 
+        - id: h2db
+          uri: http://order:8080
+          predicates:
+            - Path=/test_db/** 
         - id: making
           uri: http://making:8080
           predicates:

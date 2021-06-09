@@ -15,23 +15,32 @@ spec:
         app: order
     spec:
       containers:
-        - name: msadev1-order
-          image: 243114843418.dkr.ecr.ap-northeast-2.amazonaws.com/msadev1-order:v1
-          ports:
-            - containerPort: 8080
-          readinessProbe:
-            httpGet:
-              path: '/actuator/health'
-              port: 8080
-            initialDelaySeconds: 10
-            timeoutSeconds: 2
-            periodSeconds: 5
-            failureThreshold: 10
-          livenessProbe:
-            httpGet:
-              path: '/actuator/health'
-              port: 8080
-            initialDelaySeconds: 120
-            timeoutSeconds: 2
-            periodSeconds: 5
-            failureThreshold: 5
+        - name: user17-order
+          image: 879772956301.dkr.ecr.ca-central-1.amazonaws.com/user17-order:v2
+          # ports:
+          #   - containerPort: 8080
+          env:
+            - name: GREETING_PREFIX
+              valueFrom:
+                configMapKeyRef:
+                  name: spring-boot-configmaps-demo
+                  key: greeter.prefix
+          # resources:
+          #   requests:
+          #     cpu: "200m"
+          # readinessProbe:
+          #   httpGet:
+          #     path: '/actuator/health'
+          #     port: 8080
+          #   initialDelaySeconds: 10
+          #   timeoutSeconds: 2
+          #   periodSeconds: 5
+          #   failureThreshold: 10
+          # livenessProbe:
+          #   httpGet:
+          #     path: '/actuator/health'
+          #     port: 8080
+          #   initialDelaySeconds: 120
+          #   timeoutSeconds: 2
+          #   periodSeconds: 5
+          #   failureThreshold: 5
